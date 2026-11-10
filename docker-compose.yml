@@ -1,0 +1,8 @@
+services:
+  app: #name of service
+    build: #tell it needs to build an image from source code
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
